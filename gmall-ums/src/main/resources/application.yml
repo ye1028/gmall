@@ -1,0 +1,21 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: ums-server
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+  redis:
+    host: localhost
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/guli_ums?useSSL=false&serverTimezone=UTC
+    username: root
+    password: 123456
+mybatis-plus:
+  mapper-locations: classpath:mapper/ums/**/*.xml
+  global-config:
+    db-config:
+      id-type: auto

@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: search-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+  elasticsearch:
+    rest:
+      uris: localhost:9200
+  rabbitmq:
+    host: 192.168.21.128
+    virtual-host: /root
+    username: root
+    password: 123456
+server:
+  port: 8086
+feign:
+  httpclient:
+    enabled: true
+
+
